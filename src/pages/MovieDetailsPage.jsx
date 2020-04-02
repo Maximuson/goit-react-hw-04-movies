@@ -2,7 +2,6 @@ import React, { Component, Suspense, lazy } from 'react';
 import Film from '../components/Film/Film';
 import * as api from '../api/api';
 import { Link, Route } from 'react-router-dom';
-import Loader from '../components/Loader/Loader';
 
 const Cast = lazy(() => import('../components/Cast/Cast'));
 const Reviews = lazy(() => import('../components/Reviews/Reviews'));
@@ -74,7 +73,7 @@ export default class MovieDetailsPage extends Component {
           </Link>
         </div>
         <div style={line} />
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Route
             exact
             path={`${this.props.match.path}/cast`}

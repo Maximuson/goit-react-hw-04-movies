@@ -1,0 +1,13 @@
+.personPhoto {
+  width: 100px;
+  height: auto;
+}
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.castListItem {
+  margin: 15px;
+}
